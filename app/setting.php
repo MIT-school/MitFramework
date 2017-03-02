@@ -5,10 +5,10 @@ return [
         'displayErrorDetails' => true,
         'db' => [
             'user' => 'root',
-            'pass' => 'apple',
-            'host' => 'localhost',
-            'port' => '3306',
-            'name' => 'mydatabase'
+            'pass' => 'poikoiloi@',
+            'host' => 'chongieball',
+            'port' => '',
+            'name' => 'slim'
         ]
     ]
 ]
