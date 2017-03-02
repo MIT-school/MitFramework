@@ -5,4 +5,6 @@ $app->get('/hello/{name}', function ($request, $response, $args) {
     return $controller->getHello($request, $response, $args);
 });
 
+//just test
+
 ?>
