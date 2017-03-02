@@ -1,7 +1,7 @@
 {
    "autoload" : {
         "psr-4" : {
-            "Shoop\\" : "src/Shoop"
+            "Mit\\" : "src/"
         }
     },
     "require": {
