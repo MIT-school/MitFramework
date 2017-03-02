@@ -5,8 +5,6 @@ $app->get('/hello/{name}', function ($request, $response, $args) {
     return $controller->getHello($request, $response, $args);
 });
 
-//$app->get('/users/{id}','Mit\Controllers\UserController:getAll');
-
 $app->get('/users/add','Mit\Controllers\UserController:add');
 
 ?>
