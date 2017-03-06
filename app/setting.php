@@ -9,7 +9,8 @@ return [
             'host' => 'chongieball',
             'port' => '',
             'name' => 'slim'
-        ]
+        ],
+        'view_path' => __DIR__ .'/../views'
     ]
 ]
 

@@ -17,5 +17,12 @@ $container['db'] = function ($c) {
         $config
     );
     return $connection->createQueryBuilder();
-
 };
+
+$container['view'] = function ($c) {
+    $path = $c->get('settings')['view_path'];
+    $plates = new League\Plates\Engine($path);
+
+    return $plates;
+};
+
