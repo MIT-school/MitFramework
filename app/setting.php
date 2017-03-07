@@ -8,7 +8,18 @@ return [
             'pass' => 'poikoiloi@',
             'host' => 'chongieball',
             'port' => '',
-            'name' => 'slim'
+            'name' => 'mit_framework'
+        ],
+        'view' => [
+            'view_path' =>  __DIR__ .'/../views',
+            'twig' => [
+                'cache' => false,
+                'debug' => true,
+                'auto_reload' => true,
+            ],
+        ],
+        'lang' => [
+            'default' => 'id'
         ]
     ]
 ]

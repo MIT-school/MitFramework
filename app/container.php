@@ -17,5 +17,28 @@ $container['db'] = function ($c) {
         $config
     );
     return $connection->createQueryBuilder();
-
 };
+
+$container['view'] = function ($c) {
+    $settings = $c->get('settings');
+    $view = new \Slim\Views\Twig($settings['view']['view_path'], 
+        $settings['view']['twig']);
+    
+    $view->addExtension(new Slim\Views\TwigExtension($c->router, $c->request->getUri()));
+
+    $view->getEnvironment()->addGlobal('old', $_SESSION['old']);
+    unset($_SESSION['old']);
+    $view->getEnvironment()->addGlobal('errors', $_SESSION['errors']);
+    unset($_SESSION['errors']);
+
+    return $view;
+};
+
+$container['validation'] = function ($c) {
+    $settings = $c->get('settings');
+    $param = $c['request']->getParams();
+    $lang = $settings['lang'];
+
+    return new \Valitron\Validator($param, [], $lang['default']);
+};
+
