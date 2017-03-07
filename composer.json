@@ -11,8 +11,10 @@
         "league/plates": "^3.1",
         "robmorgan/phinx": "^0.8.0",
         "league/flysystem": "^1.0",
-        "simple-validator/simple-validator": "dev-master",
-      "behat/behat": "~2.5",
-      "fzaninotto/faker": "^1.6"
+        "behat/behat": "~2.5",
+        "fzaninotto/faker": "^1.6",
+        "aura/session": "^2.1",
+        "slim/twig-view": "^2.2",
+        "vlucas/valitron": "^1.4"
     } 
 }

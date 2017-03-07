@@ -33,7 +33,7 @@ abstract class AbstractModel
 
 	}
 
-	public function createData(array $data, $id)
+	public function createData(array $data)
 	{
 
 		$valuesColumn = [];
@@ -43,10 +43,9 @@ abstract class AbstractModel
 			$valuesColumn[$dataKey] = ':'.$dataKey;
 			$valuesData[$dataKey] = $dataValue;
 		}
-		var_dump($valuesColumn);
 		$this->db->insert($this->table)
 				->values($valuesColumn)
-				->setParameters($valuesData);
+				->setParameters($valuesData)
 		 		->execute();
 		
 	}
